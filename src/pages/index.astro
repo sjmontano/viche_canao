@@ -1,5 +1,127 @@
 ---
-import Base from '../layouts/Base.astro';
-import Hero from '../components/Hero.astro';
+import SEOHead from '../components/SEOHead.astro';
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/react/Navbar';
+import HeroHeadline from '../components/react/HeroHeadline';
+import FeatureCarousel from '../components/react/FeatureCarousel';
+import { ArrowUpRight } from 'lucide-react';
+import '../styles/global.css';
 ---
-<Base title="Viche CANAO — Destilado ancestral del Pacífico" description="Viche CANAO por Delicias del Atrato, Boca de Amé Chocó. Puro, Dorado y Vinete. Patrimonio Ley 2158."><Hero /><section class="max-w-6xl mx-auto px-4 py-12"><h2 class="font-display text-3xl">Marca y catálogo</h2><p class="text-muted mt-2">Oswaldo y Liseth Martínez, 20+ años, mujeres cabeza de hogar.</p><a href="/catalogo" class="text-ambar">Ver catálogo →</a></section></Base>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <SEOHead
+    title="Viche CANAO — El Poder de la Tierra en cada Gota"
+    description="Destilado ancestral del Pacífico colombiano por Delicias del Atrato, Boca de Amé, Chocó. Puro, Dorado y Vinete. Patrimonio Ley 2158."
+    ogImage="/fotos/hero.jpg"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div
+    class="min-h-screen flex flex-col relative overflow-hidden bg-deep"
+    style="background-image: url(/fotos/hero.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;"
+  >
+    <div class="absolute inset-0 bg-gradient-to-b from-deep/80 via-base/70 to-deep pointer-events-none"></div>
+
+    <div class="relative z-20">
+      <Navbar client:load />
+    </div>
+
+    <section class="relative z-10 flex-1 flex flex-col justify-center px-5 sm:px-8 lg:px-10 pt-6 pb-10">
+      <HeroHeadline client:load />
+
+      <div class="animate-fade-up delay-600 mt-8 sm:mt-12 lg:mt-[75px] flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8 lg:gap-[50px]">
+        <a
+          href="/catalogo"
+          class="w-full sm:w-[240px] md:w-[280px] lg:w-[310px] h-14 sm:h-16 lg:h-[72px] bg-dorado text-deep rounded-md inline-flex items-center justify-center gap-2 font-medium text-base sm:text-lg lg:text-2xl hover:brightness-110 transition"
+          style="font-family: Inter, sans-serif; letter-spacing: -0.03em;"
+        >
+          Explorar catálogo
+          <ArrowUpRight size={22} />
+        </a>
+        <p
+          class="text-white max-w-[310px] text-sm sm:text-base lg:text-lg leading-[1.45]"
+          style="font-family: Inter, sans-serif; letter-spacing: -0.03em;"
+        >
+          Destilado ancestral de caña del Pacífico: aroma silvestre, fresco y balanceado.
+        </p>
+      </div>
+      <p class="animate-fade-in delay-800 mt-4 text-xs text-white/60">+18 · Consume con responsabilidad</p>
+    </section>
+
+    <div class="lg:hidden relative z-0 flex justify-center pointer-events-none">
+      <img
+        src="/fotos/dorado.jpg"
+        alt="Botella Viche CANAO Dorado"
+        class="animate-scale-in delay-800 w-[150%] max-w-[640px] aspect-[3/4] object-cover rounded-t-full drop-shadow-2xl -mb-32 sm:-mb-40"
+      />
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_2fr] relative z-10">
+      <div class="animate-fade-up delay-900 bg-panel text-deep p-6 sm:p-8 lg:p-10 flex items-center gap-6 overflow-hidden">
+        <div class="relative z-10">
+          <p
+            class="text-2xl sm:text-[28px] lg:text-[35px] leading-[1.1] max-w-[350px]"
+            style="font-family: 'DM Sans', sans-serif; letter-spacing: -0.05em;"
+          >
+            Inicia tu camino hacia el ritual ancestral
+          </p>
+          <a
+            href="/proceso"
+            class="inline-block mt-4 underline text-base lg:text-lg"
+            style="font-family: Inter, sans-serif; letter-spacing: -0.03em;"
+          >
+            Ver el proceso
+          </a>
+        </div>
+        <img
+          src="/fotos/puro.jpg"
+          alt="Viche CANAO Puro"
+          class="hidden sm:block h-40 lg:h-56 aspect-[3/4] object-cover rounded-t-full ml-auto shrink-0"
+        />
+      </div>
+
+      <div class="animate-fade-up delay-1000 bg-papel p-6 sm:p-8 lg:p-10">
+        <FeatureCarousel client:visible />
+      </div>
+
+      <div class="animate-fade-up delay-1100 bg-deep p-6 sm:p-8 lg:p-10 flex items-center gap-5">
+        <img
+          src="/fotos/vinete.jpg"
+          alt="Vinete CANAO con especias"
+          class="w-[120px] h-[82px] sm:w-[160px] sm:h-[110px] lg:w-[208px] lg:h-[142px] object-cover rounded-xl shrink-0"
+        />
+        <div>
+          <p
+            class="text-white text-2xl sm:text-3xl lg:text-[35px]"
+            style="font-family: Inter, sans-serif; letter-spacing: -0.05em;"
+          >
+            +20
+          </p>
+          <p
+            class="text-white/60 text-sm sm:text-base lg:text-lg leading-[1.2] mt-1"
+            style="font-family: Inter, sans-serif;"
+          >
+            Años de tradición familiar en Boca de Amé
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <img
+      src="/fotos/dorado.jpg"
+      alt=""
+      aria-hidden="true"
+      class="animate-scale-in delay-700 hidden lg:block absolute z-0 pointer-events-none object-cover rounded-t-full aspect-[3/4]"
+      style="width: clamp(600px, 80vw, 1412px); max-height: 130vh; bottom: -10%; right: clamp(-400px, -20vw, -100px); opacity: 0.9;"
+    />
+  </div>
+  <Footer />
+</body>
+</html>
