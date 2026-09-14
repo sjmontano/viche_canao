@@ -14,3 +14,8 @@ describe('paginas', () => { it('index usa Hero', () => {
 describe('catalogo', () => { it('slug page existe', () => {
   expect(fs.existsSync('src/pages/catalogo/[slug].astro')).toBe(true);
 });});
+describe('archivo', () => { it('404 tiene +18 e inicio', () => {
+  const s = fs.readFileSync('src/pages/404.astro','utf8');
+  expect(s).toContain('+18');
+  expect(s).toContain('/');
+});});

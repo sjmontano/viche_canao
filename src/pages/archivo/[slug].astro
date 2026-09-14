@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+export async function getStaticPaths() {
+  const historias = await getCollection('historias');
+  return historias.map((h) => ({ params: { slug: h.slug }, props: { h } }));
+}
+const { h } = Astro.props;
+const { Content } = await h.render();
+---
+<Base title={`${h.data.titulo} — Archivo CANAO`} description={h.data.resumen}>
+<section class="max-w-3xl mx-auto px-4 py-12">
+<p class="text-xs text-muted">{h.data.fecha}</p>
+<h1 class="font-display text-4xl mt-1">{h.data.titulo}</h1>
+<div class="mt-6 prose prose-invert"><Content /></div>
+</section>
+</Base>

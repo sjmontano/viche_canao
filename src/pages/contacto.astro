@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import WhatsAppCTA from '../components/WhatsAppCTA.astro';
+import { INSTAGRAM_URL } from '../consts';
+---
+<Base title="Contacto — Viche CANAO" description="Contacto Delicias del Atrato, Boca de Amé, Quibdó Chocó. WhatsApp e Instagram.">
+<section class="max-w-3xl mx-auto px-4 py-12">
+<h1 class="font-display text-4xl">Contacto</h1>
+<p class="text-muted mt-2">Delicias del Atrato · Boca de Amé, Medio Atrato · Quibdó, Chocó.</p>
+<div class="mt-6 flex flex-col gap-4">
+<WhatsAppCTA msg="Hola CANAO, quiero conocer el catálogo" />
+<a href={INSTAGRAM_URL} class="text-ambar" rel="noopener">Instagram viche_canao →</a>
+</div>
+</section>
+</Base>
