@@ -33,4 +33,19 @@ describe('landing sin links rotos', () => {
     expect(tw).toContain('#01271A');
     expect(tw).toContain('#F89902');
   });
+  it('ningún color se llama "base" (colisiona con text-base de Tailwind)', () => {
+    const tw = fs.readFileSync('tailwind.config.mjs', 'utf8');
+    expect(tw).not.toMatch(/colors:\s*\{\s*base\s*:/);
+    expect(tw).not.toContain(' base:');
+  });
+  it('tailwind escanea tsx (clases de islas React no purgadas)', () => {
+    const tw = fs.readFileSync('tailwind.config.mjs', 'utf8');
+    expect(tw).toContain('tsx');
+  });
+  it('iconos de marca con fondo van en redondo', () => {
+    for (const f of ['src/components/react/Navbar.tsx', 'src/components/react/FeatureCarousel.tsx']) {
+      const s = fs.readFileSync(f, 'utf8');
+      expect(s).toContain('rounded-full');
+    }
+  });
 });

@@ -18,10 +18,19 @@ export default function Navbar() {
       <nav className="animate-fade-in px-5 sm:px-8 lg:px-10 py-4 lg:py-5 flex items-center justify-between relative z-20">
         <a
           href="/"
-          className="animate-slide-left delay-200 text-white font-medium text-[30px] tracking-[-0.05em] leading-none"
-          style={{ fontFamily: '"DM Sans", sans-serif' }}
+          className="animate-slide-left delay-200 flex items-center gap-3"
         >
-          CANAO
+          <img
+            src="/icons/logo.jpg"
+            alt="Logo Viche CANAO"
+            className="w-10 h-10 lg:w-12 lg:h-12 rounded-full object-cover ring-1 ring-dorado/60"
+          />
+          <span
+            className="text-white font-medium text-[30px] tracking-[-0.05em] leading-none"
+            style={{ fontFamily: '"DM Sans", sans-serif' }}
+          >
+            CANAO
+          </span>
         </a>
         <div className="animate-fade-in delay-400 hidden md:flex items-center gap-10">
           {LINKS.map((l) => (

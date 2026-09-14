@@ -4,6 +4,7 @@ import { SITE_URL } from '../consts';
 const canonical = new URL(Astro.url.pathname, SITE_URL).toString();
 ---
 <title>{title}</title>
+<link rel="icon" type="image/jpeg" href="/icons/logo.jpg" />
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
 <meta property="og:title" content={title} />

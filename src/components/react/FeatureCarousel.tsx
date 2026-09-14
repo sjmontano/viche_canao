@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
-import { FlaskConical, Leaf, Droplets, Sun } from 'lucide-react';
 
 const CARDS = [
-  { Icon: FlaskConical, circle: 'bg-black', text: 'Destilación ancestral en alambique tradicional' },
-  { Icon: Leaf, circle: 'bg-emerald-800', text: 'Caña nativa cultivada sin químicos' },
-  { Icon: Droplets, circle: 'bg-cyan-800', text: 'Fermentación lenta de 8 a 15 días' },
-  { Icon: Sun, circle: 'bg-amber-700', text: 'Manos de mujeres del Medio Atrato' },
+  { img: '/icons/nuestraGente.jpg', alt: 'Nuestra gente', text: 'Manos de mujeres cabeza de hogar del Medio Atrato' },
+  { img: '/icons/recetas.jpg', alt: 'Recetas y coctelería', text: 'Puro, Dorado y Vinete: un ritual para cada momento' },
+  { img: '/icons/compras.jpg', alt: 'Compra directa', text: 'Del trapiche a tu mesa: pedido directo por WhatsApp' },
+  { img: '/icons/momento.jpg', alt: 'Momento CANAO', text: 'El momento de celebrar la herencia del Pacífico' },
 ];
 
 export default function FeatureCarousel() {
@@ -16,17 +15,21 @@ export default function FeatureCarousel() {
   }, []);
   return (
     <div className="flex flex-col h-full">
-      <div className="relative flex-1 min-h-[120px] sm:min-h-[140px]">
-        {CARDS.map(({ Icon, circle, text }, i) => (
+      <div className="relative flex-1 min-h-[132px] sm:min-h-[152px]">
+        {CARDS.map(({ img, alt, text }, i) => (
           <div
             key={text}
-            className={`flex items-center gap-4 transition-all duration-500 ${
-              i === active ? 'opacity-100 translate-y-0 relative' : 'opacity-0 translate-y-4 absolute inset-0 pointer-events-none'
+            className={`items-center gap-4 transition-all duration-500 ${
+              i === active
+                ? 'opacity-100 translate-y-0 relative flex'
+                : 'opacity-0 translate-y-4 absolute inset-0 pointer-events-none flex'
             }`}
           >
-            <span className={`${circle} w-10 h-10 sm:w-12 sm:h-12 rounded-full grid place-items-center shrink-0`}>
-              <Icon size={20} className="text-white" strokeWidth={1.5} />
-            </span>
+            <img
+              src={img}
+              alt={alt}
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover ring-1 ring-black/10 shrink-0"
+            />
             <p
               className="text-black/80 text-sm sm:text-base lg:text-lg leading-[1.2]"
               style={{ fontFamily: 'Inter, sans-serif', letterSpacing: '-0.03em' }}

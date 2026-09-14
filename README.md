@@ -47,8 +47,10 @@ Página web escalable del **Viche CANAO**: presenta la marca, su catálogo (Puro
 | Decisión | Elección | Por qué |
 |---|---|---|
 | Sitio | **Astro 4 SSG** + TypeScript estricto | 0 JS por defecto, rapidísimo, SEO nativo |
+| Interactividad | **React 18** (islas) + **Lucide** | Solo navbar, headline y carousel hidratan; el resto es estático |
 | Estilos | **Tailwind 3** + tokens propios | Sistema oscuro premium `#0F0D0B` + ámbar `#D9A441` + caña `#7FB069` |
 | Contenido | **Decap CMS** + Markdown tipado (Zod) | La familia edita en `/admin` sin tocar código |
+| Marca | Verde `#01271A` + dorado `#F89902`, DM Sans + Inter | Logo e iconos propios en `public/icons/` (se muestran en círculo) |
 | Hosting | **Cloudflare Pages** | Gratis, SSL gratis, previews por PR |
 | Calidad | `astro check` + Vitest + Lighthouse ≥ 95 | Cada cambio se verifica antes de integrar |
 
