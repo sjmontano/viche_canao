@@ -1,0 +1,6 @@
+backend: {name: git-gateway, branch: main}
+media_folder: "public/fotos"
+public_folder: "/fotos"
+collections:
+  - {name: productos, label: Productos, folder: "src/content/productos", create: true, slug: "{{slug}}", fields: [{label: Nombre, name: nombre, widget: string},{label: Slug, name: slug, widget: string},{label: Tipo, name: tipo, widget: select, options: [puro,dorado,vinete]},{label: Descripción, name: descripcion, widget: text},{label: Aroma, name: aroma, widget: string},{label: Notas, name: notas, widget: list},{label: Usos, name: usos, widget: string},{label: Foto, name: foto, widget: image},{label: WhatsApp, name: whatsapp_msg, widget: string},{label: Cuerpo, name: body, widget: markdown}]}
+  - {name: historias, label: Archivo, folder: "src/content/historias", create: true, slug: "{{slug}}", fields: [{label: Título, name: titulo, widget: string},{label: Slug, name: slug, widget: string},{label: Fecha, name: fecha, widget: datetime},{label: Resumen, name: resumen, widget: text},{label: Cuerpo, name: body, widget: markdown}]}
