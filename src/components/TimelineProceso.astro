@@ -1,0 +1,18 @@
+---
+const pasos = [
+  { t: 'Siembra', d: 'Caña nativa entre río, mar y selva, sin químicos.' },
+  { t: 'Corte lunar', d: 'Corte en la luna correcta para el dulzor.' },
+  { t: 'Molienda', d: 'Trapiche étnico, jugo fresco de caña.' },
+  { t: 'Fermentación', d: '8 a 15 días en recipientes tapados.' },
+  { t: 'Destilación', d: 'Alambique tradicional, extracción del espíritu.' },
+  { t: 'Embotellado', d: 'Delicias del Atrato, nombres de las productoras en botella.' },
+];
+---
+<ol class="grid md:grid-cols-3 gap-4">
+{pasos.map((p, i) => (
+  <li class="bg-surf border border-white/10 rounded-2xl p-5">
+    <p class="text-ambar font-display text-xl">{i+1}. {p.t}</p>
+    <p class="text-sm text-muted mt-2">{p.d}</p>
+  </li>
+))}
+</ol>
