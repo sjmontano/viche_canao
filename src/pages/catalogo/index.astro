@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import FichaProducto from '../../components/FichaProducto.astro';
+import { getCollection } from 'astro:content';
+const productos = await getCollection('productos');
+---
+<Base title="Catálogo — Viche CANAO" description="Puro cristalino, Dorado ámbar y Vinete. Fichas con aroma, notas y pedido por WhatsApp.">
+<section class="max-w-6xl mx-auto px-4 py-12">
+<h1 class="font-display text-4xl">Catálogo</h1>
+<div class="grid md:grid-cols-3 gap-4 mt-6">
+{productos.map((p) => (<a href={`/catalogo/${p.slug}`}><FichaProducto p={p} /></a>))}
+</div>
+</section>
+</Base>

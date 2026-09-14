@@ -1,0 +1,6 @@
+---
+import { WHATSAPP_NUMBER } from '../consts';
+const { msg } = Astro.props;
+const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+---
+<a href={href} target="_blank" rel="noopener" class="bg-ambar text-base px-5 py-3 rounded-full font-semibold">Pedir por WhatsApp</a>

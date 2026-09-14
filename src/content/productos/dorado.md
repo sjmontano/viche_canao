@@ -1,6 +1,5 @@
 ---
 nombre: "Viche CANAO Dorado"
-slug: "dorado"
 tipo: "dorado"
 descripcion: "Viche ámbar, suave y aromático. Reposo que redondea el destilado puro."
 aroma: "Madera suave, caramelo de caña, fondo ahumado leve"

@@ -1,6 +1,5 @@
 ---
 nombre: "Vinete CANAO"
-slug: "vinete"
 tipo: "vinete"
 descripcion: "Último chorro de la destilación con canela, nuez moscada y especias."
 aroma: "Especiado cálido, canela y nuez moscada"

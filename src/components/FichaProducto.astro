@@ -1,0 +1,7 @@
+---
+const { p } = Astro.props;
+---
+<article class="bg-surf rounded-2xl overflow-hidden border border-white/10">
+<img src={p.data.foto} alt={p.data.nombre} loading="lazy" class="w-full h-64 object-cover" />
+<div class="p-5"><h3 class="font-display text-2xl">{p.data.nombre}</h3><p class="text-sm text-cana mt-1">{p.data.aroma}</p><p class="text-sm text-muted mt-2">{p.data.descripcion}</p></div>
+</article>

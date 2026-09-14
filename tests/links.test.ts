@@ -11,3 +11,6 @@ describe('paginas', () => { it('index usa Hero', () => {
   const s = fs.readFileSync('src/pages/index.astro','utf8');
   expect(s).toContain('Hero');
 });});
+describe('catalogo', () => { it('slug page existe', () => {
+  expect(fs.existsSync('src/pages/catalogo/[slug].astro')).toBe(true);
+});});

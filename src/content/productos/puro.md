@@ -1,6 +1,5 @@
 ---
 nombre: "Viche CANAO Puro"
-slug: "puro"
 tipo: "puro"
 descripcion: "Cristalino y brillante, destilado de jugo de caña fermentado 8-15 días."
 aroma: "Silvestre, fresco, plantas recién cortadas, sutil y balanceado"
