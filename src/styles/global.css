@@ -1,0 +1,7 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root { color-scheme: dark; }
+body { background:#0F0D0B; color:#F5EFE6; font-family:Inter,system-ui,sans-serif; }
+.font-display { font-family:Fraunces,serif; }
+.reveal { opacity:0; translate:0 16px; transition:opacity .6s ease, translate .6s ease; }
+.reveal.is-visible { opacity:1; translate:0 0; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity:1; translate:none; transition:none; } }
