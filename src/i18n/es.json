@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "historia": "Historia",
+    "proceso": "Proceso",
+    "catalogo": "Catálogo",
+    "archivo": "Archivo",
+    "contacto": "Contacto"
+  },
+  "hero": {
+    "eyebrow": "Boca de Amé · Medio Atrato · Chocó",
+    "title": "Espíritu del pueblo negro, destilado ancestral",
+    "sub": "Viche CANAO por Delicias del Atrato — Oswaldo y Liseth Martínez. 20+ años de caña, río y selva.",
+    "ctaCatalogo": "Ver catálogo",
+    "ctaWhats": "WhatsApp"
+  },
+  "mayor": "+18 · Consume con responsabilidad"
+}

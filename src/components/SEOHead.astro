@@ -1,0 +1,13 @@
+---
+const { title, description, ogImage='/og-default.jpg' } = Astro.props;
+import { SITE_URL } from '../consts';
+const canonical = new URL(Astro.url.pathname, SITE_URL).toString();
+---
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:type" content="website" />
+<script is:inline type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Viche CANAO","url":SITE_URL})}</script>
